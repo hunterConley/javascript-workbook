@@ -15,10 +15,8 @@ Using conditional statements, compare the two hands to one another
 const rockPaperScissors = (hand1, hand2) => {
 
     //Convert user input to lowercase and trim whitespace
-    hand1 = hand1.toLowerCase();
-    hand1 = hand1.trim();
-    hand2 = hand2.toLowerCase();
-    hand2 = hand2.trim();
+    hand1 = hand1.toLowerCase().trim();
+    hand2 = hand2.toLowerCase().trim();
 
     //Functions that will be called by the conditional output and display the result
     const itsATie = () => console.log('It`s a tie!');
