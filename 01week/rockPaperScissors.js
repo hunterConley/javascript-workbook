@@ -7,17 +7,62 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+/*
+Define a function named rockPaperScissors()
+rockPaperScissors() will accept two parameters: hand1, hand2
+Using conditional statements, compare the two hands to one another
+ */
+const rockPaperScissors = (hand1, hand2) => {
 
-function rockPaperScissors(hand1, hand2) {
+    //Convert user input to lowercase and trim whitespace
+    hand1 = hand1.toLowerCase();
+    hand1 = hand1.trim();
+    hand2 = hand2.toLowerCase();
+    hand2 = hand2.trim();
 
-  // Write code here
+    //Functions that will be called by the conditional output and display the result
+    const itsATie = () => console.log('It`s a tie!');
+    const handOneWins = () => console.log('Hand One Wins!');
+    const handTwoWins = () => console.log('Hand Two Wins!');
+    const invalidHand = () => console.log('Invalid Input!');
+
+    //Conditional statement to test for a tie.
+    if (hand1 === hand2) {
+        return itsATie();
+    }
+
+    //Using a conditional statement, determine the winner of the rock paper scissors match.
+    if (hand1 === 'rock') {
+        if (hand2 === 'scissors') {
+            return handOneWins();
+        } else if (hand2 === 'paper') {
+            return handTwoWins();
+        }
+    } else if (hand1 === 'paper') {
+        if (hand2 === 'rock') {
+            return handOneWins();
+        } else if (hand2 === 'scissors') {
+            return handTwoWins();
+        }
+    } else if (hand1 === 'scissors') {
+        if (hand2 === 'rock') {
+            return handTwoWins();
+        } else if (hand2 === 'paper') {
+            return handOneWins();
+        }
+    } else {
+        return invalidHand();
+    }
+
+
+
 
 }
 
 function getPrompt() {
-  rl.question('hand1: ', (answer1) => {
-    rl.question('hand2: ', (answer2) => {
-      console.log( rockPaperScissors(answer1, answer2) );
+  rl.question('Select Hand One (Rock, Paper, or Scissors): ', (answer1) => {
+    rl.question('Select Hand Two (Rock, Paper, or Scissors): ', (answer2) => {
+      rockPaperScissors(answer1, answer2);
       getPrompt();
     });
   });
