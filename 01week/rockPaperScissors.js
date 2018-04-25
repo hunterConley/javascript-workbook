@@ -19,10 +19,10 @@ const rockPaperScissors = (hand1, hand2) => {
     hand2 = hand2.toLowerCase().trim();
 
     //Functions that will be called by the conditional output and display the result
-    const itsATie = () => 'It`s a tie!';
-    const handOneWins = () => 'Hand One Wins!';
-    const handTwoWins = () => 'Hand Two Wins!';
-    const invalidHand = () => 'Invalid Input!';
+    const itsATie = () => "It's a tie!";
+    const handOneWins = () => "Hand One Wins!";
+    const handTwoWins = () => "Hand Two Wins!";
+    const invalidHand = () => "Invalid Input!";
 
     //Conditional statement to test for a tie.
     if (hand1 === hand2) {
@@ -77,14 +77,14 @@ if (typeof describe === 'function') {
       assert.equal(rockPaperScissors('scissors', 'scissors'), "It's a tie!");
     });
     it('should detect which hand won', () => {
-      assert.equal(rockPaperScissors('rock', 'paper'), "Hand two wins!");
-      assert.equal(rockPaperScissors('paper', 'scissors'), "Hand two wins!");
-      assert.equal(rockPaperScissors('rock', 'scissors'), "Hand one wins!");
+      assert.equal(rockPaperScissors('rock', 'paper'), "Hand Two Wins!");
+      assert.equal(rockPaperScissors('paper', 'scissors'), "Hand Two Wins!");
+      assert.equal(rockPaperScissors('rock', 'scissors'), "Hand One Wins!");
     });
     it('should scrub input to ensure lowercase with "trim"ed whitepace', () => {
-      assert.equal(rockPaperScissors('rOcK', ' paper '), "Hand two wins!");
-      assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand two wins!");
-      assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand one wins!");
+      assert.equal(rockPaperScissors('rOcK', ' paper '), "Hand Two Wins!");
+      assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand Two Wins!");
+      assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand One Wins!");
     });
   });
 } else {
