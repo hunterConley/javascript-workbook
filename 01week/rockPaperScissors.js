@@ -19,10 +19,10 @@ const rockPaperScissors = (hand1, hand2) => {
     hand2 = hand2.toLowerCase().trim();
 
     //Functions that will be called by the conditional output and display the result
-    const itsATie = () => console.log('It`s a tie!');
-    const handOneWins = () => console.log('Hand One Wins!');
-    const handTwoWins = () => console.log('Hand Two Wins!');
-    const invalidHand = () => console.log('Invalid Input!');
+    const itsATie = () => 'It`s a tie!';
+    const handOneWins = () => 'Hand One Wins!';
+    const handTwoWins = () => 'Hand Two Wins!';
+    const invalidHand = () => 'Invalid Input!';
 
     //Conditional statement to test for a tie.
     if (hand1 === hand2) {
