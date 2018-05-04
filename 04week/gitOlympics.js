@@ -5,8 +5,7 @@ const olympianNames = ['Keith', 'Raul', 'Hunter', 'Sarah', 'Beth'];
 
 const printListOfOlympians = (olympianNames) => {
 
-
     olympianNames.forEach(item => console.log(item));
 };
-
+//Call Function
 printListOfOlympians(olympianNames);
