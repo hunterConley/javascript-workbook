@@ -1,10 +1,12 @@
 'use strict';
 
-const printListOfOlympians = () => {
+//Function accepts an array and uses a forEach
+const olympianNames = ['Keith', 'Raul', 'Hunter', 'Sarah', 'Beth'];
 
-    //Function accepts an array and uses a forEach
-    const olympianNames = ['Keith', 'Raul', 'Hunter'];
-    olympianNames.forEach((item, index, arr) {
-        
-    })
+const printListOfOlympians = (olympianNames) => {
+
+
+    olympianNames.forEach(item => console.log(item));
 };
+
+printListOfOlympians(olympianNames);
